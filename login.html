@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - CN Artify</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/common-ui.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+  <body>
+    <div id="siteHeader"></div>
+
+    <main class="auth-page">
+      <section class="auth-section container">
+        <div class="auth-card">
+          <h1>Sign In</h1>
+          <p class="auth-subtext">Please enter your account information.</p>
+
+          <div id="authMessage"></div>
+
+          <form id="loginForm" class="auth-form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email" />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <button type="submit" class="btn auth-submit-btn">Sign In</button>
+          </form>
+
+          <p class="auth-bottom-text">
+            Don't have an account?
+            <a href="./signup.html">Sign up here</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script type="module" src="./js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CN Artify Products</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/common-ui.css" />
+    <link rel="stylesheet" href="./css/products.css" />
+  </head>
+  <body>
+    <div id="siteHeader"></div>
+
+    <main>
+      <section class="shop-toolbar container"></section>
+
+      <section class="shop-layout container">
+        <aside class="shop-sidebar">
+          <h3 class="sidebar-title">Categories</h3>
+          <ul id="shopCategoryMenu"></ul>
+          <button class="contact-owner-btn" type="button">
+            Contact shop owner
+          </button>
+        </aside>
+
+        <div class="shop-main">
+          <!-- Featured header -->
+          <div class="shop-main-header featured-header" id="featuredBlockHeader">
+            <div class="title-with-line">
+              <span class="title-line"></span>
+              <h2>Featured items</h2>
+            </div>
+
+            <!-- Filter ở Featured -->
+            <div class="shop-inline-filters" id="featuredFilters">
+              <div class="inline-filter-box">
+                <label for="priceRangeSelectTop">Price:</label>
+                <select id="priceRangeSelectTop">
+                  <option value="all">Any price</option>
+                  <option value="under-50">Under US$50</option>
+                  <option value="50-100">US$50 to US$100</option>
+                  <option value="above-100">Over US$100</option>
+                  <option value="above-50">Over US$50</option>
+                </select>
+              </div>
+
+              <div class="inline-filter-box">
+                <label for="sortSelectTop">Sort:</label>
+                <select id="sortSelectTop">
+                  <option value="default">Relevance</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="name-asc">Name: A-Z</option>
+                  <option value="name-desc">Name: Z-A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-grid" id="featuredProducts"></div>
+
+          <!-- All / Filtered items header -->
+          <div class="shop-main-header section-space all-items-header">
+            <div class="shop-main-title-block">
+              <h2 id="allItemsTitle">All items</h2>
+              <p class="result-count-text" id="resultCountText"></p>
+            </div>
+
+            <!-- Filter ở All items / Filtered products -->
+            <div class="shop-inline-filters" id="allItemsFilters">
+              <div class="inline-filter-box">
+                <label for="priceRangeSelectBottom">Price:</label>
+                <select id="priceRangeSelectBottom">
+                  <option value="all">Any price</option>
+                  <option value="under-50">Under US$50</option>
+                  <option value="50-100">US$50 to US$100</option>
+                  <option value="above-100">Over US$100</option>
+                  <option value="above-50">Over US$50</option>
+                </select>
+              </div>
+
+              <div class="inline-filter-box">
+                <label for="sortSelectBottom">Sort:</label>
+                <select id="sortSelectBottom">
+                  <option value="default">Relevance</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="name-asc">Name: A-Z</option>
+                  <option value="name-desc">Name: Z-A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-grid" id="allProducts"></div>
+
+          <div class="pagination" id="productsPagination"></div>
+        </div>
+      </section>
+
+      <section class="market-newsletter">
+        <div class="container">
+          <p>
+            Yes! Send me exclusive offers, unique gift ideas, and personalized
+            tips for shopping and selling.
+          </p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="market-powered">
+        <div class="container">
+          CN Artify online store for creative gifts and custom products.
+        </div>
+      </section>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script type="module" src="./js/products.js"></script>
+  </body>
+</html>
