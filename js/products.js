@@ -20,7 +20,7 @@
 //   + page > 1
 //   => ẩn Featured items
 //   => filter chuyển xuống phần Filtered products / All items
-
+// file name: product.js
 import { initShopData } from "./storage.js";
 import {
   getProducts,

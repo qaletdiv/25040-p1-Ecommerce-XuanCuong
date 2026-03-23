@@ -5,6 +5,7 @@
 // - render sản phẩm nổi bật
 // - slider
 // - bắt sự kiện add to cart
+// file name : index.js
 
 import { initShopData } from "./storage.js";
 import { getProducts, formatPrice, addProductToCart } from "./common.js";

@@ -1,6 +1,6 @@
 // Mục đích:
 // Đọc/ghi/xóa localStorage và nạp dữ liệu gốc từ mock-data.js khi chạy lần đầu.
-
+// storage.js
 import { STORAGE_KEYS } from "./keys.js";
 import { categories, products, users, carts, orders } from "./mock-data.js";
 

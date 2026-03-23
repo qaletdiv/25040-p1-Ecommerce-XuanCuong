@@ -3,6 +3,7 @@
 // - kiểm tra email/password
 // - lưu currentUser
 // - quay lại trang trước khi login hoặc về trang chủ
+// file name: login.js
 
 import { initShopData } from "./storage.js";
 import { renderHeader, renderFooter } from "./common-ui.js";

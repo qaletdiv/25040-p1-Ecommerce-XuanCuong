@@ -1,4 +1,4 @@
-
+// file name: mock-data.js
 export const categories = [
   { id: 1, name: "POD T-Shirts", type: "pod" },
   { id: 2, name: "POD Sweatshirt", type: "pod" },

@@ -5,7 +5,7 @@
 // - login check
 // - cart functions
 // - helper cho query params
-
+// file name: common.js
 import { STORAGE_KEYS } from "./keys.js";
 import { getLocalData, setLocalData } from "./storage.js";
 

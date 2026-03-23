@@ -1,6 +1,6 @@
 // Mục đích:
 // Render header/footer dùng chung và xử lý search tại header
-
+// file name: common-ui.js
 import {
   getCurrentUser,
   setCurrentUser,

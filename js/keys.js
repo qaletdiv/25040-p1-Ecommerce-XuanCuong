@@ -1,3 +1,4 @@
+// file name: keys.js
 export const STORAGE_KEYS = {
   CATEGORIES: "categories",
   PRODUCTS: "products",

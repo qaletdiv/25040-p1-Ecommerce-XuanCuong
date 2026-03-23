@@ -4,6 +4,7 @@
 // - kiểm tra email trùng
 // - tạo user mới
 // - chuyển sang trang login sau khi đăng ký thành công
+// file name : signup.js
 
 import { initShopData } from "./storage.js";
 import { renderHeader, renderFooter } from "./common-ui.js";
