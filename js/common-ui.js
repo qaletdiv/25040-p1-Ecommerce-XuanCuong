@@ -15,6 +15,12 @@ export function renderHeader() {
   const currentUser = getCurrentUser();
   const cartCount = currentUser ? getCartCount(currentUser.id) : 0;
 
+  const currentPath = window.location.pathname;
+  const isHomePage =
+    currentPath.endsWith("/index.html") ||
+    currentPath === "/" ||
+    currentPath.endsWith("/25040-p1-Ecommerce-XuanCuong/");
+
   container.innerHTML = `
     <header class="site-header">
       <div class="container site-header-top">
@@ -53,9 +59,13 @@ export function renderHeader() {
         <a href="./policies.html">Shop Policies</a>
       </div>
 
-      <section class="shop-cover">
+      ${
+        isHomePage
+          ? `<section class="shop-cover">
         <img src="./assets/images/shop-cover.png" alt="Shop cover" />
-      </section>
+      </section>`
+          : ""
+      }
 
       <section class="shop-info container">
         <div class="shop-info-left">

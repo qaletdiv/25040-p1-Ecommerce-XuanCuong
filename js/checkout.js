@@ -79,6 +79,10 @@ function setupCheckoutForm() {
       items,
     });
 
+    if (!order) {
+      return;
+    }
+
     showMessage("Order placed successfully.", "success");
     setTimeout(() => {
       window.location.href = `./order-confirmation.html?id=${order.id}`;

@@ -54,6 +54,9 @@ export function setCurrentUser(user) {
   setLocalData(STORAGE_KEYS.CURRENT_USER, user);
 }
 
+export function setProducts(products) {
+  setLocalData(STORAGE_KEYS.PRODUCTS, products);
+}
 export function getRedirectAfterLogin() {
   return getLocalData(STORAGE_KEYS.REDIRECT_AFTER_LOGIN, null);
 }
@@ -385,6 +388,7 @@ export function changeCartItemVariant(
 export function createOrder({ userId, shippingInfo, items }) {
   const orders = getOrders();
   const carts = getCarts();
+  const products = getProducts();
 
   const normalizedItems = (items || []).map((item) => ({
     productId: Number(item.product.id),
@@ -397,13 +401,48 @@ export function createOrder({ userId, shippingInfo, items }) {
     lineTotal: Number(item.lineTotal),
   }));
 
+  // 1. Kiểm tra stock trước, tránh trừ dở dang
+  for (const item of normalizedItems) {
+    const product = products.find(
+      (productItem) => Number(productItem.id) === Number(item.productId),
+    );
+
+    if (!product) {
+      alert(`Product "${item.name}" no longer exists.`);
+      return null;
+    }
+
+    const currentStock = Number(product.stock || 0);
+    const orderQty = Number(item.quantity || 0);
+
+    if (currentStock < orderQty) {
+      alert(
+        `Not enough stock for "${product.name}". Remaining stock: ${currentStock}.`,
+      );
+      return null;
+    }
+  }
+
+  // 2. Nếu đủ stock thì mới trừ stock
+  normalizedItems.forEach((item) => {
+    const product = products.find(
+      (productItem) => Number(productItem.id) === Number(item.productId),
+    );
+
+    product.stock = Number(product.stock || 0) - Number(item.quantity || 0);
+  });
+
+  setProducts(products);
+
   const total = normalizedItems.reduce((sum, item) => sum + item.lineTotal, 0);
 
+  const now = Date.now();
+
   const order = {
-    id: Date.now(),
-    code: `ORD-${Date.now()}`,
+    id: now,
+    code: `ORD-${now}`,
     userId: Number(userId),
-    status: "Pending",
+    status: "Completed",
     createdAt: new Date().toISOString(),
     shippingInfo,
     items: normalizedItems,
