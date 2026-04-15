@@ -20,47 +20,40 @@
 //   + page > 1
 //   => ẩn Featured items
 //   => filter chuyển xuống phần Filtered products / All items
-// file name: product.js
+// file name: products.js
+
 import { initShopData } from "./storage.js";
 import {
   getProducts,
   getCategories,
-  formatPrice,
   getQueryParam,
-  addProductToCart,
+  setupAddToCart,
 } from "./common.js";
-import { renderHeader, renderFooter } from "./common-ui.js";
+import { renderHeader, renderFooter, createProductCard } from "./common-ui.js";
 
-// Số sản phẩm hiển thị trên mỗi trang
 const PRODUCTS_PER_PAGE = 12;
 
-/**
- * Tạo HTML cho 1 product card
- */
-function createProductCard(product) {
-  return `
-    <article class="product-card">
-      <a href="./product-detail.html?id=${product.id}">
-        <img src="${product.image}" alt="${product.name}" />
-      </a>
+// function createProductCard(product) {
+//   return `
+//     <article class="product-card">
+//       <a href="./product-detail.html?id=${product.id}">
+//         <img src="${product.image}" alt="${product.name}" />
+//       </a>
 
-      <h3 class="product-title">${product.name}</h3>
+//       <h3 class="product-title">${product.name}</h3>
 
-      <div class="product-price-row">
-        <span class="product-price-current">${formatPrice(product.price)}</span>
-        <span class="product-price-old">${formatPrice(product.oldPrice)}</span>
-      </div>
+//       <div class="product-price-row">
+//         <span class="product-price-current">${formatPrice(product.price)}</span>
+//         <span class="product-price-old">${formatPrice(product.oldPrice)}</span>
+//       </div>
 
-      <button class="btn w-100 add-to-cart-btn" data-id="${product.id}">
-        Add to cart
-      </button>
-    </article>
-  `;
-}
+//       <button class="btn w-100 add-to-cart-btn" data-id="${product.id}">
+//         Add to cart
+//       </button>
+//     </article>
+//   `;
+// }
 
-/**
- * Lấy trạng thái filter hiện tại từ URL
- */
 function getFilterState() {
   return {
     keyword: (getQueryParam("keyword") || "").trim().toLowerCase(),
@@ -71,11 +64,6 @@ function getFilterState() {
   };
 }
 
-/**
- * Kiểm tra xem trang có đang ở trạng thái mặc định hay không
- * Mặc định = chưa search, chưa chọn category, sort mặc định,
- * price mặc định, page = 1
- */
 function isDefaultProductsState() {
   const { keyword, category, sort, priceRange, page } = getFilterState();
 
@@ -88,9 +76,6 @@ function isDefaultProductsState() {
   );
 }
 
-/**
- * Lọc theo keyword
- */
 function filterByKeyword(products, keyword) {
   if (!keyword) return products;
 
@@ -99,9 +84,6 @@ function filterByKeyword(products, keyword) {
   );
 }
 
-/**
- * Lọc theo category
- */
 function filterByCategory(products, category) {
   if (!category) return products;
 
@@ -110,9 +92,6 @@ function filterByCategory(products, category) {
   );
 }
 
-/**
- * Lọc theo khoảng giá
- */
 function filterByPriceRange(products, priceRange) {
   switch (priceRange) {
     case "under-50":
@@ -136,9 +115,6 @@ function filterByPriceRange(products, priceRange) {
   }
 }
 
-/**
- * Sắp xếp danh sách sản phẩm
- */
 function sortProducts(products, sort) {
   const clonedProducts = [...products];
 
@@ -161,9 +137,6 @@ function sortProducts(products, sort) {
   }
 }
 
-/**
- * Lấy danh sách sản phẩm sau khi áp dụng filter + sort
- */
 function getProcessedProducts() {
   const { keyword, category, sort, priceRange } = getFilterState();
 
@@ -172,22 +145,10 @@ function getProcessedProducts() {
   products = filterByCategory(products, category);
   products = filterByPriceRange(products, priceRange);
   products = sortProducts(products, sort);
-  
 
   return products;
 }
 
-/**
- * Đồng bộ vị trí hiển thị filter
- *
- * Mặc định:
- * - hiện filter ở Featured items
- * - ẩn filter ở All items
- *
- * Khi khác mặc định:
- * - ẩn filter ở Featured items
- * - hiện filter ở All items / Filtered products
- */
 function syncFilterVisibility() {
   const featuredFilters = document.getElementById("featuredFilters");
   const allItemsFilters = document.getElementById("allItemsFilters");
@@ -205,14 +166,6 @@ function syncFilterVisibility() {
   }
 }
 
-/**
- * Render Featured items
- *
- * Quy tắc:
- * - Chỉ hiện Featured items ở trạng thái mặc định
- * - Chỉ cần search / sort / price / category / page > 1
- *   => ẩn Featured items
- */
 function renderFeaturedProducts() {
   const container = document.getElementById("featuredProducts");
   const featuredHeader = document.getElementById("featuredBlockHeader");
@@ -238,9 +191,6 @@ function renderFeaturedProducts() {
   container.innerHTML = featuredProducts.map(createProductCard).join("");
 }
 
-/**
- * Render All items / Filtered products theo trang hiện tại
- */
 function renderAllProducts() {
   const container = document.getElementById("allProducts");
   if (!container) return;
@@ -272,9 +222,6 @@ function renderAllProducts() {
   container.innerHTML = paginatedProducts.map(createProductCard).join("");
 }
 
-/**
- * Render danh sách category bên trái
- */
 function renderCategoryMenu() {
   const container = document.getElementById("shopCategoryMenu");
   if (!container) return;
@@ -328,9 +275,6 @@ function renderCategoryMenu() {
   container.innerHTML = html;
 }
 
-/**
- * Render phân trang
- */
 function renderPagination() {
   const container = document.getElementById("productsPagination");
   if (!container) return;
@@ -378,9 +322,6 @@ function renderPagination() {
   container.innerHTML = html;
 }
 
-/**
- * Cập nhật tiêu đề All items / Filtered products
- */
 function updatePageTitleBySearch() {
   const allItemsTitle = document.getElementById("allItemsTitle");
   const countText = document.getElementById("resultCountText");
@@ -408,9 +349,6 @@ function updatePageTitleBySearch() {
   countText.textContent = `${resultCount} product(s) found`;
 }
 
-/**
- * Đồng bộ value cho cả 2 cụm filter
- */
 function syncFilterValues() {
   const { sort, priceRange } = getFilterState();
 
@@ -425,9 +363,6 @@ function syncFilterValues() {
   if (priceBottom) priceBottom.value = priceRange;
 }
 
-/**
- * Gắn sự kiện cho cả 2 cụm filter
- */
 function setupFilterControls() {
   const sortTop = document.getElementById("sortSelectTop");
   const priceTop = document.getElementById("priceRangeSelectTop");
@@ -461,23 +396,23 @@ function setupFilterControls() {
   });
 }
 
-/**
- * Bắt sự kiện Add to cart
- */
-function setupAddToCart() {
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest(".add-to-cart-btn");
-    if (!button) return;
+// function setupAddToCart() {
+//   document.addEventListener("click", (event) => {
+//     const button = event.target.closest(".add-to-cart-btn");
+//     if (!button) return;
 
-    const productId = Number(button.dataset.id);
-    addProductToCart(productId, 1);
-    renderHeader();
-  });
-}
+//     const productId = Number(button.dataset.id);
+//     const defaultVariant = getDefaultVariant();
 
-/**
- * Khởi tạo trang products
- */
+//     addProductToCart(productId, 1, {
+//       color: defaultVariant.color,
+//       size: defaultVariant.size,
+//     });
+
+//     renderHeader();
+//   });
+// }
+
 function initProductsPage() {
   initShopData();
   renderHeader();

@@ -22,7 +22,16 @@ export const products = [
     type: "pod",
     stock: 120,
     featured: true,
+    colors: ["Red", "Yellow", "Purple"],
     image: "assets/images/products/p1.jpg",
+    images: [
+      "assets/images/products/p1.jpg",
+      "assets/images/products/p1-1.jpg",
+      "assets/images/products/p1-2.jpg",
+      "assets/images/products/p1-3.jpg",
+      "assets/images/products/p1-4.jpg",
+      "assets/images/products/p1-5.jpg",
+    ],
     description:
       "Soft cotton POD T-shirt with liberty eagle design for the US market.",
   },
@@ -36,6 +45,12 @@ export const products = [
     stock: 95,
     featured: true,
     image: "assets/images/products/p2.jpg",
+    images: [
+      "assets/images/products/p2.jpg",
+      "assets/images/products/p2-1.jpg",
+      "assets/images/products/p2-2.jpg",
+      "assets/images/products/p2-3.jpg",
+    ],
     description:
       "Classic POD T-shirt inspired by the iconic Route 66 lifestyle.",
   },
@@ -49,6 +64,12 @@ export const products = [
     stock: 100,
     featured: false,
     image: "assets/images/products/p3.jpg",
+    images: [
+      "assets/images/products/p3.jpg",
+      "assets/images/products/p3-1.jpg",
+      "assets/images/products/p3-2.jpg",
+      "assets/images/products/p3-3.jpg",
+    ],
     description: "Comfortable POD T-shirt with patriotic stars print.",
   },
   {
@@ -61,6 +82,12 @@ export const products = [
     stock: 88,
     featured: false,
     image: "assets/images/products/p4.jpg",
+    images: [
+      "assets/images/products/p4.jpg",
+      "assets/images/products/p4-1.jpg",
+      "assets/images/products/p4-2.jpg",
+      "assets/images/products/p4-3.jpg",
+    ],
     description: "Modern POD T-shirt with USA spirit typography.",
   },
   {
@@ -73,6 +100,12 @@ export const products = [
     stock: 140,
     featured: true,
     image: "assets/images/products/p5.jpg",
+    images: [
+      "assets/images/products/p5.jpg",
+      "assets/images/products/p5-1.jpg",
+      "assets/images/products/p5-2.jpg",
+      "assets/images/products/p5-3.jpg",
+    ],
     description: "Minimal style POD T-shirt featuring a subtle US flag print.",
   },
 
@@ -86,6 +119,12 @@ export const products = [
     stock: 80,
     featured: true,
     image: "assets/images/products/p6.jpg",
+    images: [
+      "assets/images/products/p6.jpg",
+      "assets/images/products/p6-1.jpg",
+      "assets/images/products/p6-2.jpg",
+      "assets/images/products/p6-3.jpg",
+    ],
     description: "Warm and cozy POD sweatshirt for casual everyday wear.",
   },
   {
@@ -98,6 +137,12 @@ export const products = [
     stock: 76,
     featured: false,
     image: "assets/images/products/p7.jpg",
+    images: [
+      "assets/images/products/p7.jpg",
+      "assets/images/products/p7-1.jpg",
+      "assets/images/products/p7-2.jpg",
+      "assets/images/products/p7-3.jpg",
+    ],
     description: "Premium POD sweatshirt with American dream graphic.",
   },
   {
@@ -110,6 +155,12 @@ export const products = [
     stock: 64,
     featured: false,
     image: "assets/images/products/p8.jpg",
+    images: [
+      "assets/images/products/p8.jpg",
+      "assets/images/products/p8-1.jpg",
+      "assets/images/products/p8-2.jpg",
+      "assets/images/products/p8-3.jpg",
+    ],
     description: "Outdoor-inspired POD sweatshirt with mountain camp artwork.",
   },
   {
@@ -122,6 +173,12 @@ export const products = [
     stock: 90,
     featured: true,
     image: "assets/images/products/p9.jpg",
+    images: [
+      "assets/images/products/p9.jpg",
+      "assets/images/products/p9-1.jpg",
+      "assets/images/products/p9-2.jpg",
+      "assets/images/products/p9-3.jpg",
+    ],
     description:
       "Retro college style POD sweatshirt with soft fleece interior.",
   },
@@ -135,6 +192,12 @@ export const products = [
     stock: 55,
     featured: false,
     image: "assets/images/products/p10.jpg",
+    images: [
+      "assets/images/products/p10.jpg",
+      "assets/images/products/p10-1.jpg",
+      "assets/images/products/p10-2.jpg",
+      "assets/images/products/p10-3.jpg",
+    ],
     description: "POD sweatshirt featuring a bold patriot badge print.",
   },
 
@@ -148,6 +211,12 @@ export const products = [
     stock: 70,
     featured: true,
     image: "assets/images/products/p11.jpg",
+    images: [
+      "assets/images/products/p11.jpg",
+      "assets/images/products/p11-1.jpg",
+      "assets/images/products/p11-2.jpg",
+      "assets/images/products/p11-3.jpg",
+    ],
     description:
       "Streetwear-inspired POD hoodie with front pocket and soft lining.",
   },
@@ -161,6 +230,12 @@ export const products = [
     stock: 60,
     featured: false,
     image: "assets/images/products/p12.jpg",
+    images: [
+      "assets/images/products/p12.jpg",
+      "assets/images/products/p12-1.jpg",
+      "assets/images/products/p12-2.jpg",
+      "assets/images/products/p12-3.jpg",
+    ],
     description: "Powerful wolf artwork POD hoodie for bold everyday style.",
   },
   {
@@ -173,6 +248,12 @@ export const products = [
     stock: 68,
     featured: false,
     image: "assets/images/products/p13.jpg",
+    images: [
+      "assets/images/products/p13.jpg",
+      "assets/images/products/p13-1.jpg",
+      "assets/images/products/p13-2.jpg",
+      "assets/images/products/p13-3.jpg",
+    ],
     description:
       "Relaxed fit POD hoodie inspired by sunset highway adventures.",
   },
@@ -186,6 +267,12 @@ export const products = [
     stock: 72,
     featured: true,
     image: "assets/images/products/p14.jpg",
+    images: [
+      "assets/images/products/p14.jpg",
+      "assets/images/products/p14-1.jpg",
+      "assets/images/products/p14-2.jpg",
+      "assets/images/products/p14-3.jpg",
+    ],
     description: "Vintage washed POD hoodie with classic USA typography.",
   },
   {
@@ -198,6 +285,12 @@ export const products = [
     stock: 49,
     featured: false,
     image: "assets/images/products/p15.jpg",
+    images: [
+      "assets/images/products/p15.jpg",
+      "assets/images/products/p15-1.jpg",
+      "assets/images/products/p15-2.jpg",
+      "assets/images/products/p15-3.jpg",
+    ],
     description:
       "Urban style POD hoodie featuring a modern flag-inspired design.",
   },
@@ -212,6 +305,12 @@ export const products = [
     stock: 150,
     featured: true,
     image: "assets/images/products/p16.jpg",
+    images: [
+      "assets/images/products/p16.jpg",
+      "assets/images/products/p16-1.jpg",
+      "assets/images/products/p16-2.jpg",
+      "assets/images/products/p16-3.jpg",
+    ],
     description: "Ceramic POD mug with a cheerful morning quote.",
   },
   {
@@ -224,6 +323,12 @@ export const products = [
     stock: 135,
     featured: false,
     image: "assets/images/products/p17.jpg",
+    images: [
+      "assets/images/products/p17.jpg",
+      "assets/images/products/p17-1.jpg",
+      "assets/images/products/p17-2.jpg",
+      "assets/images/products/p17-3.jpg",
+    ],
     description: "High-quality POD mug designed for coffee lovers.",
   },
   {
@@ -236,6 +341,12 @@ export const products = [
     stock: 180,
     featured: false,
     image: "assets/images/products/p18.jpg",
+    images: [
+      "assets/images/products/p18.jpg",
+      "assets/images/products/p18-1.jpg",
+      "assets/images/products/p18-2.jpg",
+      "assets/images/products/p18-3.jpg",
+    ],
     description: "Simple and clean POD mug with freedom-inspired graphics.",
   },
   {
@@ -248,6 +359,12 @@ export const products = [
     stock: 120,
     featured: true,
     image: "assets/images/products/p19.jpg",
+    images: [
+      "assets/images/products/p19.jpg",
+      "assets/images/products/p19-1.jpg",
+      "assets/images/products/p19-2.jpg",
+      "assets/images/products/p19-3.jpg",
+    ],
     description: "Vintage style POD mug with flag illustration.",
   },
   {
@@ -260,6 +377,12 @@ export const products = [
     stock: 165,
     featured: false,
     image: "assets/images/products/p20.jpg",
+    images: [
+      "assets/images/products/p20.jpg",
+      "assets/images/products/p20-1.jpg",
+      "assets/images/products/p20-2.jpg",
+      "assets/images/products/p20-3.jpg",
+    ],
     description: "Minimal ceramic POD mug with star-themed print.",
   },
 
@@ -273,6 +396,12 @@ export const products = [
     stock: 110,
     featured: true,
     image: "assets/images/products/p21.jpg",
+    images: [
+      "assets/images/products/p21.jpg",
+      "assets/images/products/p21-1.jpg",
+      "assets/images/products/p21-2.jpg",
+      "assets/images/products/p21-3.jpg",
+    ],
     description: "Durable POD flag suitable for indoor and outdoor decoration.",
   },
   {
@@ -285,6 +414,12 @@ export const products = [
     stock: 90,
     featured: false,
     image: "assets/images/products/p22.jpg",
+    images: [
+      "assets/images/products/p22.jpg",
+      "assets/images/products/p22-1.jpg",
+      "assets/images/products/p22-2.jpg",
+      "assets/images/products/p22-3.jpg",
+    ],
     description: "Printed POD flag with liberty-themed artwork.",
   },
   {
@@ -297,6 +432,12 @@ export const products = [
     stock: 105,
     featured: false,
     image: "assets/images/products/p23.jpg",
+    images: [
+      "assets/images/products/p23.jpg",
+      "assets/images/products/p23-1.jpg",
+      "assets/images/products/p23-2.jpg",
+      "assets/images/products/p23-3.jpg",
+    ],
     description: "Decorative POD flag perfect for patriotic home display.",
   },
   {
@@ -309,6 +450,12 @@ export const products = [
     stock: 85,
     featured: true,
     image: "assets/images/products/p24.jpg",
+    images: [
+      "assets/images/products/p24.jpg",
+      "assets/images/products/p24-1.jpg",
+      "assets/images/products/p24-2.jpg",
+      "assets/images/products/p24-3.jpg",
+    ],
     description: "Vintage-style POD flag with premium fabric finish.",
   },
   {
@@ -321,6 +468,12 @@ export const products = [
     stock: 100,
     featured: false,
     image: "assets/images/products/p25.jpg",
+    images: [
+      "assets/images/products/p25.jpg",
+      "assets/images/products/p25-1.jpg",
+      "assets/images/products/p25-2.jpg",
+      "assets/images/products/p25-3.jpg",
+    ],
     description: "Eye-catching POD flag with stars and freedom symbol.",
   },
 
@@ -334,6 +487,12 @@ export const products = [
     stock: 25,
     featured: true,
     image: "assets/images/products/p26.jpg",
+    images: [
+      "assets/images/products/p26.jpg",
+      "assets/images/products/p26-1.jpg",
+      "assets/images/products/p26-2.jpg",
+      "assets/images/products/p26-3.jpg",
+    ],
     description: "Handmade cotton T-shirt with delicate embroidered details.",
   },
   {
@@ -346,6 +505,12 @@ export const products = [
     stock: 18,
     featured: false,
     image: "assets/images/products/p27.jpg",
+    images: [
+      "assets/images/products/p27.jpg",
+      "assets/images/products/p27-1.jpg",
+      "assets/images/products/p27-2.jpg",
+      "assets/images/products/p27-3.jpg",
+    ],
     description: "Floral handmade T-shirt crafted with care and unique design.",
   },
   {
@@ -358,6 +523,12 @@ export const products = [
     stock: 22,
     featured: false,
     image: "assets/images/products/p28.jpg",
+    images: [
+      "assets/images/products/p28.jpg",
+      "assets/images/products/p28-1.jpg",
+      "assets/images/products/p28-2.jpg",
+      "assets/images/products/p28-3.jpg",
+    ],
     description: "Boho-inspired handmade T-shirt with decorative stitching.",
   },
   {
@@ -370,6 +541,12 @@ export const products = [
     stock: 16,
     featured: true,
     image: "assets/images/products/p29.jpg",
+    images: [
+      "assets/images/products/p29.jpg",
+      "assets/images/products/p29-1.jpg",
+      "assets/images/products/p29-2.jpg",
+      "assets/images/products/p29-3.jpg",
+    ],
     description: "Soft handmade T-shirt highlighted with yarn accent details.",
   },
   {
@@ -382,6 +559,12 @@ export const products = [
     stock: 20,
     featured: false,
     image: "assets/images/products/p30.jpg",
+    images: [
+      "assets/images/products/p30.jpg",
+      "assets/images/products/p30-1.jpg",
+      "assets/images/products/p30-2.jpg",
+      "assets/images/products/p30-3.jpg",
+    ],
     description: "Minimal handmade T-shirt for a simple and cozy style.",
   },
 
@@ -395,6 +578,12 @@ export const products = [
     stock: 14,
     featured: true,
     image: "assets/images/products/p31.jpg",
+    images: [
+      "assets/images/products/p31.jpg",
+      "assets/images/products/p31-1.jpg",
+      "assets/images/products/p31-2.jpg",
+      "assets/images/products/p31-3.jpg",
+    ],
     description: "Warm handmade sweatshirt created with soft knit details.",
   },
   {
@@ -407,6 +596,12 @@ export const products = [
     stock: 12,
     featured: false,
     image: "assets/images/products/p32.jpg",
+    images: [
+      "assets/images/products/p32.jpg",
+      "assets/images/products/p32-1.jpg",
+      "assets/images/products/p32-2.jpg",
+      "assets/images/products/p32-3.jpg",
+    ],
     description: "Comfortable handmade sweatshirt for winter styling.",
   },
   {
@@ -419,6 +614,12 @@ export const products = [
     stock: 10,
     featured: false,
     image: "assets/images/products/p33.jpg",
+    images: [
+      "assets/images/products/p33.jpg",
+      "assets/images/products/p33-1.jpg",
+      "assets/images/products/p33-2.jpg",
+      "assets/images/products/p33-3.jpg",
+    ],
     description: "Handmade sweatshirt with unique artisan patchwork details.",
   },
   {
@@ -431,6 +632,12 @@ export const products = [
     stock: 9,
     featured: true,
     image: "assets/images/products/p34.jpg",
+    images: [
+      "assets/images/products/p34.jpg",
+      "assets/images/products/p34-1.jpg",
+      "assets/images/products/p34-2.jpg",
+      "assets/images/products/p34-3.jpg",
+    ],
     description:
       "Premium handmade sweatshirt made from soft wool blend fabric.",
   },
@@ -444,6 +651,12 @@ export const products = [
     stock: 11,
     featured: false,
     image: "assets/images/products/p35.jpg",
+    images: [
+      "assets/images/products/p35.jpg",
+      "assets/images/products/p35-1.jpg",
+      "assets/images/products/p35-2.jpg",
+      "assets/images/products/p35-3.jpg",
+    ],
     description:
       "Neutral tone handmade sweatshirt for clean and elegant outfits.",
   },
@@ -458,6 +671,12 @@ export const products = [
     stock: 8,
     featured: true,
     image: "assets/images/products/p36.jpg",
+    images: [
+      "assets/images/products/p36.jpg",
+      "assets/images/products/p36-1.jpg",
+      "assets/images/products/p36-2.jpg",
+      "assets/images/products/p36-3.jpg",
+    ],
     description: "Chunky knit handmade hoodie designed for warmth and comfort.",
   },
   {
@@ -470,6 +689,12 @@ export const products = [
     stock: 7,
     featured: false,
     image: "assets/images/products/p37.jpg",
+    images: [
+      "assets/images/products/p37.jpg",
+      "assets/images/products/p37-1.jpg",
+      "assets/images/products/p37-2.jpg",
+      "assets/images/products/p37-3.jpg",
+    ],
     description: "Handmade hoodie with cozy yarn texture and practical fit.",
   },
   {
@@ -482,6 +707,12 @@ export const products = [
     stock: 6,
     featured: false,
     image: "assets/images/products/p38.jpg",
+    images: [
+      "assets/images/products/p38.jpg",
+      "assets/images/products/p38-1.jpg",
+      "assets/images/products/p38-2.jpg",
+      "assets/images/products/p38-3.jpg",
+    ],
     description: "Handmade hoodie with subtle floral winter-inspired accents.",
   },
   {
@@ -494,6 +725,12 @@ export const products = [
     stock: 8,
     featured: true,
     image: "assets/images/products/p39.jpg",
+    images: [
+      "assets/images/products/p39.jpg",
+      "assets/images/products/p39-1.jpg",
+      "assets/images/products/p39-2.jpg",
+      "assets/images/products/p39-3.jpg",
+    ],
     description: "Soft-touch handmade hoodie with a cozy premium finish.",
   },
   {
@@ -506,6 +743,12 @@ export const products = [
     stock: 5,
     featured: false,
     image: "assets/images/products/p40.jpg",
+    images: [
+      "assets/images/products/p40.jpg",
+      "assets/images/products/p40-1.jpg",
+      "assets/images/products/p40-2.jpg",
+      "assets/images/products/p40-3.jpg",
+    ],
     description: "Limited handmade hoodie crafted carefully in small quantity.",
   },
 
@@ -519,6 +762,12 @@ export const products = [
     stock: 30,
     featured: true,
     image: "assets/images/products/p41.jpg",
+    images: [
+      "assets/images/products/p41.jpg",
+      "assets/images/products/p41-1.jpg",
+      "assets/images/products/p41-2.jpg",
+      "assets/images/products/p41-3.jpg",
+    ],
     description: "Classic wool handmade hat for cozy and stylish cold days.",
   },
   {
@@ -531,6 +780,12 @@ export const products = [
     stock: 24,
     featured: false,
     image: "assets/images/products/p42.jpg",
+    images: [
+      "assets/images/products/p42.jpg",
+      "assets/images/products/p42-1.jpg",
+      "assets/images/products/p42-2.jpg",
+      "assets/images/products/p42-3.jpg",
+    ],
     description: "Elegant handmade hat with winter charm details.",
   },
   {
@@ -543,6 +798,12 @@ export const products = [
     stock: 20,
     featured: false,
     image: "assets/images/products/p43.jpg",
+    images: [
+      "assets/images/products/p43.jpg",
+      "assets/images/products/p43-1.jpg",
+      "assets/images/products/p43-2.jpg",
+      "assets/images/products/p43-3.jpg",
+    ],
     description: "Handmade braided yarn hat with a lovely textured finish.",
   },
   {
@@ -555,6 +816,12 @@ export const products = [
     stock: 28,
     featured: true,
     image: "assets/images/products/p44.jpg",
+    images: [
+      "assets/images/products/p44.jpg",
+      "assets/images/products/p44-1.jpg",
+      "assets/images/products/p44-2.jpg",
+      "assets/images/products/p44-3.jpg",
+    ],
     description: "Soft beige handmade hat perfect for minimal winter fashion.",
   },
   {
@@ -567,6 +834,12 @@ export const products = [
     stock: 18,
     featured: false,
     image: "assets/images/products/p45.jpg",
+    images: [
+      "assets/images/products/p45.jpg",
+      "assets/images/products/p45-1.jpg",
+      "assets/images/products/p45-2.jpg",
+      "assets/images/products/p45-3.jpg",
+    ],
     description: "Cute handmade hat with pom pom detail and cozy fit.",
   },
 
@@ -580,6 +853,12 @@ export const products = [
     stock: 15,
     featured: true,
     image: "assets/images/products/p46.jpg",
+    images: [
+      "assets/images/products/p46.jpg",
+      "assets/images/products/p46-1.jpg",
+      "assets/images/products/p46-2.jpg",
+      "assets/images/products/p46-3.jpg",
+    ],
     description: "Handmade knitted decorative flag for warm home styling.",
   },
   {
@@ -592,6 +871,12 @@ export const products = [
     stock: 12,
     featured: false,
     image: "assets/images/products/p47.jpg",
+    images: [
+      "assets/images/products/p47.jpg",
+      "assets/images/products/p47-1.jpg",
+      "assets/images/products/p47-2.jpg",
+      "assets/images/products/p47-3.jpg",
+    ],
     description: "Rustic decorative handmade flag crafted from quality yarn.",
   },
   {
@@ -604,6 +889,12 @@ export const products = [
     stock: 11,
     featured: false,
     image: "assets/images/products/p48.jpg",
+    images: [
+      "assets/images/products/p48.jpg",
+      "assets/images/products/p48-1.jpg",
+      "assets/images/products/p48-2.jpg",
+      "assets/images/products/p48-3.jpg",
+    ],
     description:
       "Boho style handmade flag for wall decoration and cozy spaces.",
   },
@@ -617,6 +908,12 @@ export const products = [
     stock: 10,
     featured: true,
     image: "assets/images/products/p49.jpg",
+    images: [
+      "assets/images/products/p49.jpg",
+      "assets/images/products/p49-1.jpg",
+      "assets/images/products/p49-2.jpg",
+      "assets/images/products/p49-3.jpg",
+    ],
     description:
       "Decorative handmade flag with soft texture and artisan finish.",
   },
@@ -630,6 +927,12 @@ export const products = [
     stock: 14,
     featured: false,
     image: "assets/images/products/p50.jpg",
+    images: [
+      "assets/images/products/p50.jpg",
+      "assets/images/products/p50-1.jpg",
+      "assets/images/products/p50-2.jpg",
+      "assets/images/products/p50-3.jpg",
+    ],
     description: "Minimal handmade flag for simple and elegant decor.",
   },
 ];

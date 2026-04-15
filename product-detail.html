@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CN Artify - Product Detail</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/common-ui.css" />
+    <link rel="stylesheet" href="./css/product-detail.css" />
+  </head>
+  <body>
+    <div id="siteHeader"></div>
+
+    <main class="product-detail-page">
+      <div class="container">
+        <nav class="detail-breadcrumb" aria-label="Breadcrumb">
+          <a href="./index.html">Home</a>
+          <span>/</span>
+          <a href="./products.html">Products</a>
+          <span>/</span>
+          <span id="detailBreadcrumbCurrent">Product detail</span>
+        </nav>
+
+        <section id="productDetailSection" class="product-detail-top">
+          <!-- render by js -->
+        </section>
+
+        <section class="detail-wide-info-section">
+          <div id="detailWideInfo" class="detail-wide-info-card">
+            <!-- render by js -->
+          </div>
+        </section>
+
+        <section class="related-products-section">
+          <div class="related-products-head">
+            <h2>You may also like</h2>
+          </div>
+          <div id="relatedProducts" class="product-grid">
+            <!-- render by js -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script type="module" src="./js/product-detail.js"></script>
+  </body>
+</html>

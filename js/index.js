@@ -8,26 +8,8 @@
 // file name : index.js
 
 import { initShopData } from "./storage.js";
-import { getProducts, formatPrice, addProductToCart } from "./common.js";
-import { renderHeader, renderFooter } from "./common-ui.js";
-
-function createProductCard(product) {
-  return `
-    <article class="product-card">
-      <a href="./product-detail.html?id=${product.id}">
-        <img src="${product.image}" alt="${product.name}" />
-      </a>
-      <h3 class="product-title">${product.name}</h3>
-      <div class="product-price-row">
-        <span class="product-price-current">${formatPrice(product.price)}</span>
-        <span class="product-price-old">${formatPrice(product.oldPrice)}</span>
-      </div>
-      <button class="btn w-100 add-to-cart-btn" data-id="${product.id}">
-        Add to cart
-      </button>
-    </article>
-  `;
-}
+import { getProducts, setupAddToCart, getDefaultVariant } from "./common.js";
+import { renderHeader, renderFooter, createProductCard } from "./common-ui.js";
 
 function renderFeaturedProducts() {
   const container = document.getElementById("featuredProducts");
@@ -38,19 +20,6 @@ function renderFeaturedProducts() {
     .slice(0, 8);
 
   container.innerHTML = featuredProducts.map(createProductCard).join("");
-}
-
-function setupAddToCart() {
-  // Mục đích:
-  // Dùng event delegation để bắt click nút add to cart trong trang home
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest(".add-to-cart-btn");
-    if (!button) return;
-
-    const productId = Number(button.dataset.id);
-    addProductToCart(productId, 1);
-    renderHeader();
-  });
 }
 
 function setupHomeSlider() {
@@ -101,7 +70,7 @@ function setupHomeSlider() {
 
   function startAutoSlide() {
     stopAutoSlide();
-    autoSlide = setInterval(nextSlide, 4000);
+    autoSlide = setInterval(nextSlide, 9000);
   }
 
   function stopAutoSlide() {

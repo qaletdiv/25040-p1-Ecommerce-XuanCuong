@@ -185,7 +185,7 @@
 /* =========================
    Product grid
 ========================= */
-.product-grid {
+/* .product-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
@@ -249,7 +249,7 @@
 .add-to-cart-btn:active {
   transform: translateY(0);
   box-shadow: none;
-}
+} */
 
 /* =========================
    Pagination

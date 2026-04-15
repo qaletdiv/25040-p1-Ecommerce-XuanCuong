@@ -1,0 +1,50 @@
+.policies-page {
+  padding: 28px 0 40px;
+}
+
+.policies-hero {
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.policies-hero-text {
+  max-width: 780px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.policy-card {
+  padding: 24px;
+}
+
+.policy-card h2 {
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+}
+
+.policy-card ul {
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.policy-card li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .policies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policies-hero,
+  .policy-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,103 @@
+/* file name: order-confirmation.css */
+.order-confirm-page {
+  padding: 28px 0 40px;
+  display: grid;
+  gap: 22px;
+}
+
+.confirm-hero,
+.confirm-info-card,
+.confirm-items-card {
+  padding: 24px;
+}
+
+.confirm-hero {
+  text-align: center;
+}
+
+.confirm-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eaf9ee;
+  color: #14853b;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 auto 12px;
+}
+
+.confirm-subtext {
+  margin-top: 10px;
+}
+
+.confirm-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.confirm-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.confirm-info-card h2,
+.confirm-items-card h2 {
+  margin-bottom: 16px;
+}
+
+.confirm-info-list {
+  display: grid;
+  gap: 12px;
+}
+
+.confirm-info-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ececec;
+}
+
+.confirm-items-list {
+  display: grid;
+  gap: 14px;
+}
+
+.confirm-item-row {
+  display: grid;
+  grid-template-columns: 84px 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.confirm-item-row img {
+  border-radius: 14px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f4f4f4;
+}
+
+.confirm-item-row h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .confirm-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confirm-item-row {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .confirm-item-row strong {
+    grid-column: 2;
+  }
+}

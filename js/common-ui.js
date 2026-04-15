@@ -7,7 +7,7 @@ import {
   redirect,
   getCartCount,
 } from "./common.js";
-
+import { formatPrice } from "./common.js";
 export function renderHeader() {
   const container = document.getElementById("siteHeader");
   if (!container) return;
@@ -50,7 +50,7 @@ export function renderHeader() {
         <a href="./index.html">Home</a>
         <a href="./products.html">Products</a>
         <a href="./contact.html">Contact</a>
-        <a href="#">Shop Policies</a>
+        <a href="./policies.html">Shop Policies</a>
       </div>
 
       <section class="shop-cover">
@@ -122,53 +122,74 @@ export function renderFooter() {
       <div class="container market-footer-main">
         <div class="market-footer-brand">
           <div class="market-brand-box">CN</div>
-          <button class="download-app-btn">Download the App</button>
+          <!-- <button class="download-app-btn">Download the App</button> -->
         </div>
 
         <div class="market-footer-cols">
           <div>
             <h3>Shop</h3>
-            <a href="#">Gift cards</a>
-            <a href="#">Registry</a>
-            <a href="#">Sitemap</a>
-            <a href="#">Blog</a>
+            <a href="index.html">Home Page</a>
+            <a href="products.html">Products</a>
+            <!--<a href="#">Sitemap</a>-->
+            <!-- <a href="#">Blog</a> -->
           </div>
 
-          <div>
+         <!-- <div>
             <h3>Sell</h3>
             <a href="#">Sell on marketplace</a>
             <a href="#">Teams</a>
             <a href="#">Forums</a>
             <a href="#">Affiliates</a>
-          </div>
+          </div> -->
 
           <div>
             <h3>About</h3>
-            <a href="#">Company</a>
-            <a href="#">Policies</a>
-            <a href="#">Investors</a>
-            <a href="#">Careers</a>
+            <a href="contact.html">Company</a>
+            <a href="policies.html">Policies</a>
+            <!--<a href="#">Investors</a>-->
+            <!--<a href="#">Careers</a>-->
           </div>
 
           <div>
             <h3>Help</h3>
-            <a href="#">Help Center</a>
-            <a href="#">Privacy settings</a>
-            <a href="#">Contact support</a>
+            <a href="contact.html">Help Center</a>
+            <!--<a href="#">Privacy settings</a>-->
+            <a href="contact.html">Contact support</a>
           </div>
         </div>
       </div>
 
       <div class="market-footer-bottom">
         <div class="container market-footer-bottom-inner">
-          <div>Vietnam | English (US) | ₫ (VND)</div>
-          <div class="footer-bottom-links">
+          <div>© ${new Date().getFullYear()} CN. All rights reserved.</div>
+          <!--<div class="footer-bottom-links">
             <a href="#">Terms of Use</a>
             <a href="#">Privacy</a>
             <a href="#">Regions</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
+  `;
+}
+export function createProductCard(product) {
+  console.log("creatProductCard: ", product);
+  return `
+    <article class="product-card">
+      <a href="./product-detail.html?id=${product.id}">
+        <img src="${product.image}" alt="${product.name}" />
+      </a>
+
+      <h3 class="product-title">${product.name}</h3>
+
+      <div class="product-price-row">
+        <span class="product-price-current">${formatPrice(product.price)}</span>
+        <span class="product-price-old">${formatPrice(product.oldPrice)}</span>
+      </div>
+
+      <button class="btn w-100 add-to-cart-btn" data-id="${product.id}">
+        Add to cart
+      </button>
+    </article>
   `;
 }

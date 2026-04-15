@@ -1,0 +1,98 @@
+/* file name: account.css */
+.account-page {
+  padding: 28px 0 40px;
+  display: grid;
+  gap: 22px;
+}
+
+.account-hero,
+.account-orders-section {
+  padding: 24px;
+}
+
+.account-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.account-profile-grid div {
+  padding: 18px;
+  border-radius: 16px;
+  background: #fafafa;
+  border: 1px solid var(--border);
+}
+
+.account-profile-grid span {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.account-orders-list {
+  display: grid;
+  gap: 18px;
+}
+
+.account-order-item {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.account-order-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.account-order-top h3 {
+  font-size: 1.05rem;
+}
+
+.account-order-top p {
+  color: var(--muted);
+}
+
+.account-order-right {
+  text-align: right;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #eef8f0;
+  color: #13763a;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.account-order-body ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.account-order-body li + li {
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .account-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-order-top {
+    flex-direction: column;
+  }
+
+  .account-order-right {
+    text-align: left;
+  }
+}

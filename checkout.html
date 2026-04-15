@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - CN Artify</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/common-ui.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+  </head>
+  <body>
+    <div id="siteHeader"></div>
+
+    <main class="checkout-page container">
+      <div class="section-header checkout-header">
+        <div>
+          <p class="section-kicker">Secure checkout</p>
+          <h1 class="section-title">Shipping information</h1>
+        </div>
+      </div>
+
+      <section class="checkout-layout">
+        <div class="checkout-form-card card">
+          <form id="checkoutForm" class="checkout-form">
+            <div id="checkoutMessage"></div>
+
+            <div class="checkout-field-grid two-col">
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Enter full name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea
+                id="address"
+                rows="4"
+                placeholder="Enter shipping address"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn checkout-submit-btn">
+              Confirm order
+            </button>
+          </form>
+        </div>
+
+        <aside id="checkoutSummarySection"></aside>
+      </section>
+    </main>
+
+    <div id="siteFooter"></div>
+
+    <script type="module" src="./js/checkout.js"></script>
+  </body>
+</html>
